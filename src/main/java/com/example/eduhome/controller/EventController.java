@@ -1,4 +1,4 @@
-package com.example.eduhome.Conroller;
+package com.example.eduhome.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

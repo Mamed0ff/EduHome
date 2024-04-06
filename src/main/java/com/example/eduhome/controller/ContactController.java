@@ -1,12 +1,11 @@
-package com.example.eduhome.Conroller;
+package com.example.eduhome.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-
 @Controller
-public class HomeController {
-    @GetMapping("/")
+public class ContactController {
+    @GetMapping("/contact")
     public String index(){
-        return "home";
+        return "contact";
     }
 }
