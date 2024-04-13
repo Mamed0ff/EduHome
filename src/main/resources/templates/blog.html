@@ -29,10 +29,10 @@
             <div class="row">
                 <div class="col-md-8">
                     <div class="row">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-6 col-sm-6 col-xs-12" th:each="blog:${blogs}">
                             <div class="single-blog mb-60">
                                 <div class="blog-img">
-                                    <a th:href="@{/blog/details}"><img th:src="@{img/blog/blog1.jpg}" alt="blog"></a>
+                                    <a th:href="@{/blog/details}"><img th:src="'img/blog/'+${blog.getImage()}" alt="blog"></a>
                                     <div class="blog-hover">
                                         <i class="fa fa-link"></i>
                                     </div>
@@ -42,102 +42,7 @@
                                         <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
                                     </div>
                                     <div class="blog-bottom">
-                                        <h2><a th:href="@{/course/details}">I must explain to you how all this a mistaken idea </a></h2>
-                                        <a th:href="@{/blog/details}">read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="single-blog mb-60">
-                                <div class="blog-img">
-                                    <a th:href="@{/blog/details}"><img th:src="@{img/blog/blog2.jpg}" alt="blog"></a>
-                                    <div class="blog-hover">
-                                        <i class="fa fa-link"></i>
-                                    </div>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-top">
-                                        <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
-                                    </div>
-                                    <div class="blog-bottom">
-                                        <h2><a th:href="@{/blog/details}">I must explain to you how all this a mistaken idea </a></h2>
-                                        <a th:href="@{/blog/details}">read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="single-blog mb-60">
-                                <div class="blog-img">
-                                    <a th:href="@{/blog/details}"><img th:src="@{img/blog/blog3.jpg}" alt="blog"></a>
-                                    <div class="blog-hover">
-                                        <i class="fa fa-link"></i>
-                                    </div>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-top">
-                                        <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
-                                    </div>
-                                    <div class="blog-bottom">
-                                        <h2><a th:href="@{/blog/details}">I must explain to you how all this a mistaken idea </a></h2>
-                                        <a th:href="@{/blog/details}">read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="single-blog mb-60">
-                                <div class="blog-img">
-                                    <a th:href="@{/blog/details}"><img th:src="@{img/blog/blog4.jpg}" alt="blog"></a>
-                                    <div class="blog-hover">
-                                        <i class="fa fa-link"></i>
-                                    </div>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-top">
-                                        <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
-                                    </div>
-                                    <div class="blog-bottom">
-                                        <h2><a th:href="@{/blog/details}">I must explain to you how all this a mistaken idea </a></h2>
-                                        <a th:href="@{/blog/details}">read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="single-blog">
-                                <div class="blog-img">
-                                    <a th:href="@{/blog/details}"><img th:src="@{img/blog/blog5.jpg}" alt="blog"></a>
-                                    <div class="blog-hover">
-                                        <i class="fa fa-link"></i>
-                                    </div>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-top">
-                                        <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
-                                    </div>
-                                    <div class="blog-bottom">
-                                        <h2><a th:href="@{/blog/details}">I must explain to you how all this a mistaken idea </a></h2>
-                                        <a th:href="@{/blog/details}">read more</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="single-blog">
-                                <div class="blog-img">
-                                    <a th:href="@{/blog/details}"><img th:src="@{img/blog/blog6.jpg}" alt="blog"></a>
-                                    <div class="blog-hover">
-                                        <i class="fa fa-link"></i>
-                                    </div>
-                                </div>
-                                <div class="blog-content">
-                                    <div class="blog-top">
-                                        <p>By Alex  /  June 20, 2017  /  <i class="fa fa-comments-o"></i> 4</p>
-                                    </div>
-                                    <div class="blog-bottom">
-                                        <h2><a th:href="@{/blog/details}">I must explain to you how all this a mistaken idea </a></h2>
+                                        <h2><a th:href="@{/course/details}" th:text="${blog.getTitle()}"></a></h2>
                                         <a th:href="@{/blog/details}">read more</a>
                                     </div>
                                 </div>

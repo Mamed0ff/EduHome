@@ -1,20 +1,19 @@
 package com.example.eduhome.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
+import lombok.*;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Entity
-@Table(name="InfoCards")
-public class CardsEntity {
+@Table(name="courses")
+public class Course {
     @Id
-    @Column(name = "cardId")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(name = "name")
     private String name;
-
-    @Column(name = "description")
-    private String text;
+    private String image;
+    private String description;
 }
